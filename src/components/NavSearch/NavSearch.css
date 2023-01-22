@@ -1,0 +1,134 @@
+.navsearch {
+    width: 70%;
+    /* background-color: #061526;  */
+    position: relative;
+    left: 210px;
+    bottom: 527px;
+    display: flex;
+    justify-content: space-around;
+    height: 72px;
+    align-items: center;
+    border-style: groove;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 4px lightgray;
+    background-color: #fff;
+}
+
+.cab {
+    cursor: pointer;
+}
+
+.cab:hover {
+    color: rgb(20,181,245);
+}
+
+.flights {
+    cursor: pointer;
+}
+
+.flights:hover {
+    color: rgb(20,181,245);
+}
+
+.train {
+    cursor: pointer;
+}
+
+.train:hover {
+    color: rgb(20,181,245);
+}
+
+
+.hotel {
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hotel:hover {
+    color: rgb(20,181,245);
+}
+
+.hotel img {
+    height: 40px;
+}
+
+.home {
+    cursor: pointer;
+}
+
+.home img {
+    position: relative;
+    left: 10px;
+} 
+
+.home:hover {
+    color: rgb(20,181,245);
+}
+
+.holiday {
+    cursor: pointer;
+}
+
+.holiday {
+    cursor: pointer;
+}
+
+.holiday img {
+    height: 50px;
+    position: relative;
+    left: 33px;
+}
+
+.holiday:hover {
+    color: rgb(20,181,245);
+}
+
+.bus {
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+.bus:hover {
+    color: rgb(20,181,245);
+}
+
+.forex {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+
+.forex:hover {
+    color: rgb(20,181,245);
+}
+
+.forex img {
+    height: 44px;
+}
+
+.charter-flight {
+    cursor: pointer;
+}
+
+.charter-flight h4 {
+    position: relative;
+    bottom: 15px;
+}
+
+.charter-flight:hover {
+    color: rgb(20,181,245);
+}
+
+.activity {
+    cursor: pointer;
+}
+
+.activity img {
+    width: 47px;
+}
+
+.activity:hover {
+    color: rgb(20,181,245);
+}
