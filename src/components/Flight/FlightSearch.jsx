@@ -63,6 +63,7 @@ const FlightSearch = ({
       <div className='flight-search-section'>
         <div className='container  bg-light  rounded-3 px-5 '>
           <form
+            // onSubmit={handleSubmit}
             className='pb-5 pt-3'
             style={{ width: "100%", marginLeft: "100px" }}
           >

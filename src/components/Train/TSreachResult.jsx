@@ -34,7 +34,7 @@ const TSreachResult = ({
         <div className='container'></div>
       </div>
       <div id='forms' className='container search-body bg-light'>
-        {filteredTrains &&
+        {filteredTrains.length>0 ?
           filteredTrains.map((data, index) => (
             <>
               <div className='accordion-item search-item'>
@@ -156,7 +156,7 @@ const TSreachResult = ({
                 </div>
               </div>
             </>
-          ))}
+          )):'No Trains found for this Route'}
         <br />
       </div>
     </div>

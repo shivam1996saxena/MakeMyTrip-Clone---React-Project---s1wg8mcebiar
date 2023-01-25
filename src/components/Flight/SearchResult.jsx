@@ -178,7 +178,7 @@ const SearchResult = ({
                 </div>
               </>
             ))
-          : "No Data Found"}
+          : "No Flights found for this Route"}
         <br />
       </div>
     </div>
