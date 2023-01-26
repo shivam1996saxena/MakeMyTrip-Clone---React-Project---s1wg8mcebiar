@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchResult.css";
+import Payment from "../Payment/Payment";
 
 const SearchResult = ({
   from,
@@ -12,8 +13,10 @@ const SearchResult = ({
   filteredflights,
   setFilteredFlights,
 }) => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  const [paymentPage, showPaymentPage] = useState(false);
+  const closePayment = () => showPaymentPage(false);
   const [openCollaspe, setOpenCollaspe] = useState(null);
 
   const handleCollapse = (collapseId) => {
@@ -33,7 +36,7 @@ const SearchResult = ({
       <div className="search-head pt-2 pb-3">
         <div className="container"></div>
       </div>
-      {console.log(filteredflights, 'hi',)}
+      {/* {console.log(filteredflights, 'hi',)} */}
       <div id="forms" className="container search-body bg-light">
         {filteredflights.length>0
           ? filteredflights.map((data, index) => (
@@ -164,10 +167,11 @@ const SearchResult = ({
                               <div className="col-md-4 text-center pt-3">
                                 <button
                                   className="btn btn-success  book-now"
-                                  onClick={() => handleBookNow(data.price)}
+                                  onClick={() => showPaymentPage(true)}
                                 >
                                   BOOK NOW
                                 </button>
+                                {paymentPage && <Payment closePayment = {closePayment}/>}
                               </div>
                             </div>
                           </div>

@@ -1,14 +1,16 @@
 .payment{
+    position: fixed;
     width: 42vw;
     height: 76vh;
     display: grid;
-    box-shadow: 0 0 8px 4px;
-    position: relative;
-    left: 36rem;
-    top: 6rem;
-    padding: 8px;
-    
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    z-index: 999;
 }
 .payment h1{
     margin: 0;
@@ -38,6 +40,17 @@
     left: 90px;
 }
 
+.button-container{
+    margin: 10px;
+}
+
+.button-container button {
+    padding: 0.4rem;
+    outline: none;
+    border-radius: 0.3rem;
+    margin-right: 15px;
+}
+
 .card-detail{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -51,4 +64,16 @@
 .card-detail input{
     height: 20px;
     margin-right: 2px;
+}
+.wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(189, 189, 189, 0.9);
+    z-index: 99;
+}
+.toast{
+    z-index: 99999999999999999999;
 }

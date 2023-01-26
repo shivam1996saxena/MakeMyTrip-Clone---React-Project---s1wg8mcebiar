@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "./logo.png";
 import "./header.css";
+import { MdFlightTakeoff } from "react-icons/md";
+import { RiHotelFill } from "react-icons/ri";
+import { IoMdTrain } from "react-icons/io";
+
 
 const Header = () => {
   const [mailId, setMailId] = useState("");
@@ -13,6 +17,9 @@ const Header = () => {
   }, []);
 
   const navigate = useNavigate();
+  let username = localStorage.getItem("username")
+  
+  
 
   return (
     <nav className='navbar'>
@@ -28,7 +35,7 @@ const Header = () => {
                 className='btn btn-outline-danger'
                 onClick={() => navigate("/Master")}
               >
-                FLIGHTS
+                <MdFlightTakeoff/> FLIGHTS
               </button>
             </li>
             <li>
@@ -37,7 +44,7 @@ const Header = () => {
                 className='btn btn-outline-danger'
                 onClick={() => navigate("/hotels")}
               >
-                HOTELS
+                <RiHotelFill/> HOTELS
               </button>
             </li>
             <li>
@@ -46,7 +53,7 @@ const Header = () => {
                 className='btn btn-outline-danger'
                 onClick={() => navigate("/trains")}
               >
-                TRAINS
+                <IoMdTrain/> TRAINS
               </button>
             </li>
             <li>
@@ -58,7 +65,7 @@ const Header = () => {
                   data-bs-toggle='dropdown'
                   aria-expanded='false'
                 >
-                  User name
+                  {username}
                 </button>
                 <ul
                   className='dropdown-menu'
@@ -66,7 +73,7 @@ const Header = () => {
                 >
                   <li>
                     <a className='dropdown-item' href='.'>
-                      Hello User
+                      Hello {username}
                     </a>
                   </li>
 

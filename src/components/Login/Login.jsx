@@ -3,17 +3,18 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
+
+  const [signupUser, setSignupUser] = useState(false);
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-
-  const [userEmail, setUserEmail] = useState("shivamsaxena1996@outlook.com");
-  const [userPass, setUserPass] = useState("1234");
-
-  localStorage.setItem("email", userEmail);
-  localStorage.setItem("password", userPass);
+  if(username){
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+  localStorage.setItem("username", username);}
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +35,8 @@ const Login = () => {
       <form>
         <h2 className='title'>Log in</h2>
         <p className='subtitle'>
-          Don't have an account? <a href='#'>sign Up</a>
+          {signupUser ? 'If you have an account' : "Don't have an account?"} 
+          <a href='#' onClick={() => setSignupUser(!signupUser)}>{signupUser ? 'Log In' : 'sign Up'}</a>
         </p>
 
         <div className='social-login'>
@@ -58,6 +60,21 @@ const Login = () => {
         </p>
 
         <div className='email-login'>
+          {signupUser && (
+            <>
+            <label htmlFor='username'>
+            <b>Username</b>
+          </label>
+          <input
+            type='text'
+            placeholder='Enter UserName'
+            name='username'
+            required
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          </>
+          )}
           <label htmlFor='email'>
             <b>Email</b>
           </label>
@@ -82,11 +99,14 @@ const Login = () => {
           />
         </div>
         <button className='cta-btn' onClick={handleSubmit}>
-          Log In
+          {signupUser ? 'Register' : 'Log In'}
         </button>
+        {
+          !signupUser &&
         <a className='forget-pass' href='#'>
           Forgot password?
         </a>
+        }
         {error && <p className='error'>{error}</p>}
       </form>
     </div>

@@ -25,7 +25,7 @@ const FlightSearch = ({
       const data = await response.json();
       setFlightOption(data);
       setFlights(data);
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -38,7 +38,11 @@ const FlightSearch = ({
   const handleSubmit = (event) => {
     event.preventDefault();
     let data = [...flightsProps];
-    let result = data.filter((data) => data.from == from && data.to == to);
+    // console.log(data + " data");
+    let result = data.filter((data) => data.from === from && data.to === to);
+    // console.log(from + 'from');
+    // console.log(to + 'to');
+    
     setFilteredFlights(result);
   };
 
@@ -48,10 +52,13 @@ const FlightSearch = ({
   };
   const handleToChange = (event) => {
     setTo(event.target.value);
+    // console.log(event.target.value);
   };
 
   const handleDepartureChange = (event) => {
     setDepart(event.target.value);
+    // console.log(event.target.value);
+    
   };
 
   const handleReturnChange = (event) => {

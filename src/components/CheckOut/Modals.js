@@ -12,8 +12,8 @@ const Modals = ({ modal2Open, setModal2Open }) => {
         centered
         open={modal2Open}
         onOk={() => {
-          setModal2Open(false);
-          navigate(-1);
+          setModal2Open(true);
+          navigate(+1);
         }}
         onCancel={() => {
           setModal2Open(false);

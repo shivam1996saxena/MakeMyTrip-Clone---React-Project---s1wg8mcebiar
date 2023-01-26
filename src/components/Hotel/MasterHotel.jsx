@@ -17,6 +17,8 @@ const MasterHotel = ({ modal2Open, setModal2Open }) => {
       .then((data) => {
         setFilteredHotels(data);
         setHotels(data);
+        // console.log(data);
+        setfrom(data[0].city);
       });
   };
 

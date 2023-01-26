@@ -19,6 +19,8 @@ const MasterTrain = ({ modal2Open, setModal2Open }) => {
       .then((data) => {
         setFilteredTrains(data);
         setTrains(data);
+        setfrom(data[0].from);
+        setTo(data[0].to);
       });
   };
 

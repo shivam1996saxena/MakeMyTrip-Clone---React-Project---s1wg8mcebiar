@@ -15,8 +15,11 @@
     "antd": "^5.1.5",
     "bootstrap": "^5.2.3",
     "react": "^16.13.1",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^6.7.0"
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.7.0",
+    "react-toastify": "^8.1.0"
   },
   "jest": {
     "moduleNameMapper": {
